@@ -1,0 +1,28 @@
+<div class="col-md-6">
+
+  <textarea autocomplete="on" ng-model="inputText"></textarea>
+  <br/>
+  <label for="lines-amount">Number of lines per stanza:</label>
+  <input type="text" id="lines-amount" style="border: 0; width: 20px;" ng-model="poemParams.nLines"/>
+  <div id="lines-slider" style="width: 20%; display: inline-block;"></div>
+  <br/>
+  <label for="stanzas-amount">Number of stanzas:</label>
+  <input type="text" id="stanzas-amount" style="border: 0; width: 20px;" ng-model="poemParams.nStanzas"/>
+  <div id="stanzas-slider" style="width: 20%; display: inline-block;"></div>
+  <br/>
+  <button class="btn" ng-click="doPoetry()">Submit</button>
+  <button class="btn btn-primary" ng-click="doSave()" id="save">Save poem</button>
+</div>
+
+  <div class="col-md-6" id="poem">
+  <div ng-repeat="stanza in poem.stanzas">
+    <span ng-repeat="line in stanza track by $index">{{line}}<br/>
+    </span>
+    <br/>
+  </div>
+  </div>
+
+<div class="col-md-12">
+  <ul id="saved-poems">
+  </ul>
+</div>
