@@ -1,37 +1,30 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="col-md-6">
-
-  <textarea autocomplete="on" ng-model="inputText"></textarea>
+<div class="container">
+<div class="col-md-4">
+<label for="input-text">Write input text here:</label>
+  <textarea autocomplete="on" ng-model="inputText" id="input-text"></textarea>
+  <br/>
+  </div>
+  <div class="col-md-2">
+  <label for="stanzas-amount">Number of stanzas:</label>
+  <input type="text" id="stanzas-amount" ng-model="poemParams.nStanzas"/>
+  <div id="stanzas-slider"></div>
   <br/>
   <label for="lines-amount">Number of lines per stanza:</label>
   <input type="text" id="lines-amount" ng-model="poemParams.nLines"/>
   <div id="lines-slider"></div>
   <br/>
-  <label for="stanzas-amount">Number of stanzas:</label>
-  <input type="text" id="stanzas-amount" ng-model="poemParams.nStanzas"/>
-  <div id="stanzas-slider"></div>
-  <br/>
   <button class="btn" ng-click="doPoetry(inputText, poemParams)">Submit</button>
-  <button class="btn btn-primary" ng-click="addPoem()" id="save">Save poem</button>
 </div>
 
   <div class="col-md-6" id="poem">
+  <label>Output Text:</label>
   <div ng-repeat="stanza in poem.stanzas">
     <span ng-repeat="line in stanza track by $index">{{line}}<br/>
     </span>
     <br/>
   </div>
+  <button class="btn btn-primary" ng-click="addPoem()" id="save" ng-show="poem.stanzas.length > 1" ng-class="{disabled: !isLoggedIn}">Save poem</button>
   </div>
-
-<div class="col-md-12">
-  <ul id="saved-poems">
-    <li ng-repeat="poem in savedPoems">
-    <div ng-repeat="stanza in poem.content.stanzas">
-    <span ng-repeat="line in stanza track by $index">{{line}}<br/>
-    </span>
-    <br/>
-    </div>
-    </li>
-  </ul>
-</div>
+  </div>

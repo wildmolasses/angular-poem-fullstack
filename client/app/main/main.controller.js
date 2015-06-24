@@ -2,7 +2,9 @@
   'use strict';
 
   angular.module('poemApp')
-    .controller('MainCtrl', function($scope, $http, socket, $log) {
+    .controller('MainCtrl', function($scope, $http, socket, $log, Auth) {
+
+      $scope.isLoggedIn = Auth.isLoggedIn;
 
       $scope.poemParams = {
         'nStanzas': 2,
@@ -40,29 +42,13 @@
       };
 
       $scope.doPoetry = function(bodyOfText, poemParams) {
-        var lines = cleanLines(bodyOfText);
-        $scope.poem = constructPoem(lines, poemParams);
+        if (!bodyOfText) {
+          console.log("type something...");
+        } else {
+          var lines = cleanLines(bodyOfText);
+          $scope.poem = constructPoem(lines, poemParams);
+        }
       };
-
-
-      $http.get('/api/poems').success(function(poems) {
-        $scope.savedPoems = poems;
-
-        socket.syncUpdates('poem', $scope.savedPoems, function(event, poem, poems) {
-          // This callback is fired after the poems array is updated by the socket listeners
-
-          // sort the array every time its modified
-          poems.sort(function(a, b) {
-            a = new Date(a.date);
-            b = new Date(b.date);
-            return a > b ? -1 : a < b ? 1 : 0;
-          });
-        });
-      });
-
-      $scope.$on('$destroy', function() {
-        socket.unsyncUpdates('poem');
-      });
 
       $scope.addPoem = function() {
         $http.post('/api/poems', {
@@ -70,7 +56,6 @@
         });
         $scope.poem = '';
       };
-
 
       function getSelectionText() { // snippets of text
 

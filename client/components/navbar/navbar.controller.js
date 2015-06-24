@@ -1,11 +1,17 @@
-'use strict';
+(function(){
+    'use strict';
 
 angular.module('poemApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    },
+    {
+      'title': 'Saved',
+      'link': '/saved'
+    }
+    ];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
@@ -21,3 +27,4 @@ angular.module('poemApp')
       return route === $location.path();
     };
   });
+}());
