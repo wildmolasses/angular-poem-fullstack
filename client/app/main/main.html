@@ -19,12 +19,12 @@
 </div>
 
   <div class="col-md-6" id="poem">
-  <label>Output Text:</label>
+  <label>Output Text:</label><a ng-click="addPoem()" class="save" ng-show="poem.stanzas.length > 1"  ng-class="{disabled: !isLoggedIn}">Save 
+  <span class="glyphicon glyphicon-floppy-save pull-right"></span></a>
   <div ng-repeat="stanza in poem.stanzas">
     <span ng-repeat="line in stanza track by $index">{{line}}<br/>
     </span>
     <br/>
   </div>
-  <button class="btn btn-primary" ng-click="addPoem()" id="save" ng-show="poem.stanzas.length > 1" ng-class="{disabled: !isLoggedIn}">Save poem</button>
   </div>
   </div>

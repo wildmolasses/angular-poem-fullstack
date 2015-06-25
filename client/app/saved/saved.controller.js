@@ -2,10 +2,13 @@
     'use strict';
 
 angular.module('poemApp')
-  .controller('SavedCtrl', function($scope, $http, socket, $location) {
+  .controller('SavedCtrl', function($scope, $http, socket, $location, $log) {
+
+
+
     $http.get('/api/poems').success(function(poems) {
       $scope.savedPoems = poems;
-
+      $log.debug($scope);
       socket.syncUpdates('poem', $scope.savedPoems, function(event, poem, poems) {
         // This callback is fired after the poems array is updated by the socket listeners
         if (poems.length < 1) { $location.path('/'); } else {

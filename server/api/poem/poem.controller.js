@@ -9,20 +9,25 @@ exports.index = function(req, res) {
     if(err) { return handleError(res, err); }
     return res.json(200, poems);
   });*/
-    Poem.loadRecent(function (err, poems) {
+var userId = req.user._id;
+console.log('2:',userId);
+    Poem.loadRecent(userId, function (err, poems) {
       if(err) { return handleError(res, err); }
+      console.log(poems);
       return res.json(200, poems);
     });
 };
 
 // Get a single poem
-exports.show = function(req, res) {
-  Poem.findById(req.params.id, function (err, poem) {
+/*exports.show = function(req, res) {
+  var userId = req.params.id;
+
+  Poem.findByUser(userId, function (err, poems) {
     if(err) { return handleError(res, err); }
-    if(!poem) { return res.send(404); }
-    return res.json(poem);
+    if(!poems) { return res.send(404); }
+    return res.json(200, poems);
   });
-};
+};*/
 
 // Creates a new poem in the DB.
 exports.create = function(req, res) {
