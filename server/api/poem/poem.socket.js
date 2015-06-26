@@ -16,8 +16,9 @@ exports.register = function(socket) {
 }
 
 function onSave(socket, doc, cb) {
-  Poem.populate(doc, {path:'author', select: 'name'}, function(err, comment){
-      socket.emit('poem:save', doc);
+  Poem.populate(doc, {path:'author', select: '_id'}, function(err, poem){
+      console.log('onSave:', poem);
+      socket.emit('poem:save', poem);
     });
 }
 

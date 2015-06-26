@@ -14,10 +14,8 @@ var PoemSchema = new Schema({
 });
 
 PoemSchema.statics = {
-  loadRecent: function(user, cb) {
-    console.log("1:",user);
-    this.find({})
-    .populate({path: 'author', match: {'_id': user}})
+  loadRecent: function(userId, cb) {
+    this.find({ "author": userId })
     .sort('-date')
     .limit(20)
     .exec(cb);

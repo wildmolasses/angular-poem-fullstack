@@ -10,7 +10,6 @@ exports.index = function(req, res) {
     return res.json(200, poems);
   });*/
 var userId = req.user._id;
-console.log('2:',userId);
     Poem.loadRecent(userId, function (err, poems) {
       if(err) { return handleError(res, err); }
       console.log(poems);
@@ -18,26 +17,18 @@ console.log('2:',userId);
     });
 };
 
-// Get a single poem
-/*exports.show = function(req, res) {
-  var userId = req.params.id;
-
-  Poem.findByUser(userId, function (err, poems) {
-    if(err) { return handleError(res, err); }
-    if(!poems) { return res.send(404); }
-    return res.json(200, poems);
-  });
-};*/
-
 // Creates a new poem in the DB.
 exports.create = function(req, res) {
   delete req.body.date;
-
-  var poem = new Poem(_.merge({author: req.user._id}, req.body));
-  Poem.create(req.body, function(err, poem) {
+  var poem = new Poem(_.merge({ author: req.user._id }, req.body));
+  poem.save(function(err, poem) {
     if(err) { return handleError(res, err); }
     return res.json(201, poem);
   });
+  // Poem.create(req.body, function(err, poem) {
+  //   if(err) { return handleError(res, err); }
+  //   return res.json(201, poem);
+  // });
 };
 
 // Updates an existing poem in the DB.
