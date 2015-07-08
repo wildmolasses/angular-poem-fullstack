@@ -15,6 +15,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/erm79/Sites/edmazurek.com/yeoman/edmazurek.com-1a/app/scripts/main-2.js",
+			"settings":
+			{
+				"buffer_size": 3648,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/app/scripts/main.js",
+			"settings":
+			{
+				"buffer_size": 2883,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -23,10 +39,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 311.0,
-		"last_filter": "iife",
+		"height": 288.0,
+		"last_filter": "prett",
 		"selected_items":
 		[
+			[
+				"prett",
+				"HTMLPrettify"
+			],
 			[
 				"iife",
 				"Snippet: Immediately Invoked Function Expression"
@@ -34,10 +54,6 @@
 			[
 				"prettify",
 				"HTMLPrettify"
-			],
-			[
-				"prett",
-				"Preferences: Settings - Default"
 			],
 			[
 				"iif",
@@ -86,12 +102,19 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/client/components/socket",
-		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/server/api",
-		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/server/api/poem"
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template",
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/app/scripts"
 	],
 	"file_history":
 	[
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/app/index.html",
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/bower.json",
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/edmazurek.com-1a/app/index.html",
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/package.json",
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/app/scripts/main.js",
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/Gruntfile.js",
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/node_modules/jit-grunt/package.json",
+		"/C/Users/erm79/Sites/edmazurek.com/yeoman/edmazurek.com-1a/app/scripts/main-2.js",
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/client/index.html",
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/client/app/app.scss",
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/client/app/main/main.scss",
@@ -106,7 +129,6 @@
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/server/api/poem/poem.model.js",
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/client/app/main/main.html",
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/server/api/poem/index.js",
-		"/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/Gruntfile.js",
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/server/api/poem/poem.controller.js",
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/server/routes.js",
 		"/C/Users/erm79/Sites/edmazurek.com/yeoman/angular-poem-fullstack/client/components/navbar/navbar.controller.js",
@@ -212,14 +234,7 @@
 		"/C/Users/erm79/Sites/edmazurek.com/.htaccess",
 		"/C/Users/erm79/Sites/edmazurek.com/style.css",
 		"/C/Users/erm79/Sites/edmazurek.com/archive/index.php",
-		"/C/Users/erm79/Downloads/Ftp emazurek@edmazurek.com.xml",
-		"/C/Users/erm79/Documents/Development/Data-Science/Drexel-University/Cohort-Analysis/readme.md",
-		"/C/Users/erm79/Documents/Development/Data-Science/Drexel-University/sql-analysis/README.md",
-		"/C/Users/erm79/Documents/Development/Data-Science/Drexel-University/sql-analysis/properly columner stagehistory.sql",
-		"/C/Users/erm79/Documents/Development/Data-Science/Drexel-University/sql-analysis/stagehistory looking good.sql",
-		"/C/Users/erm79/Documents/Development/Data-Science/Drexel-University/sql-analysis/notsure2.sql",
-		"/C/Users/erm79/Documents/Development/Data-Science/Drexel-University/sql-analysis/stagehistory columner join programterm.sql",
-		"/C/Users/erm79/Documents/Development/Data-Science/Drexel-University/sql-analysis/notsure.sql"
+		"/C/Users/erm79/Downloads/Ftp emazurek@edmazurek.com.xml"
 	],
 	"find":
 	{
@@ -237,6 +252,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tick",
+			"w",
+			"container",
 			"sass",
 			"next",
 			"karma",
@@ -361,10 +379,7 @@
 			"gotowebinar",
 			"gotowebianr",
 			"gid=",
-			"bs-prst",
-			"mastertable",
-			"/veteran",
-			"partnerid="
+			"bs-prst"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -417,8 +432,69 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/erm79/Sites/edmazurek.com/yeoman/edmazurek.com-1a/app/scripts/main-2.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2335,
+								2291
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 842.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/erm79/Sites/edmazurek.com/yeoman/web-art-template/app/scripts/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2883,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1262,
+								1262
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 746.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -458,7 +534,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "angular-poem-fullstack.sublime-project",
+	"project": "web-art-template.sublime-project",
 	"replace":
 	{
 		"height": 66.0
